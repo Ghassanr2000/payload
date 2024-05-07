@@ -13,8 +13,8 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 const loadConfig = async (configPath: string) => {
-  const configPromise = await load(configPath)
-  return configPromise.default
+  const loadedConfig = await load(configPath)
+  return loadedConfig
 }
 
 let testDir

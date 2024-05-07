@@ -564,6 +564,10 @@ export type Config = {
      * @see https://payloadcms.com/docs/graphql/extending
      */
     queries?: GraphQLExtension
+    /**
+     * Filepath to write the generated schema to
+     */
+    schemaOutputFile?: string
   }
   /**
    * Tap into Payload-wide hooks.
@@ -630,7 +634,7 @@ export type Config = {
   typescript?: {
     /** Disable declare block in generated types file */
     declare?: false
-    /** Filename to write the generated types to */
+    /** Filepath to write the generated types to */
     outputFile?: string
   }
   /**
